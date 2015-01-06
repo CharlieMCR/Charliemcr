@@ -26,9 +26,9 @@ Route::get('/cv', function()
 	return View::make('cv');
 });
 
-Route::get('/projects', 'ProjectController@index');
+Route::resource('/projects', 'ProjectController');
 
-Route::get('/projects/{id}', 'ProjectController@show');
+// Route::get('/projects/{id}', 'ProjectController@show');
 
 Route::get('/contact', 'ContactController@index');
 
@@ -47,8 +47,8 @@ Route::post('users/reset_password', 'UsersController@doResetPassword');
 Route::get('users/logout', 'UsersController@logout');
 
 
-Route::get('userpanel/dashboard', function() {
-	return View::make('userpanel.dashboard');
-});
+Route::resource('userpanel/dashboard', 'DashboardController');
+
+Route::resource('userpanel/nerds', 'NerdController');
 
 Route::when('userpanel/*', 'auth');

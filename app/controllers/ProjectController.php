@@ -9,7 +9,9 @@ class ProjectController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('projects.index');
+		$projects = Project::all();
+
+		return View::make('projects.index')->with('projects', $projects);
 	}
 
 
@@ -41,9 +43,14 @@ class ProjectController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($name)
 	{
-		return View::make('projects.show')->withId($id);
+		// get the nerd
+        $projects = Project::find($name);
+
+        // show the view and pass the nerd to it
+        return View::make('projects.show')
+            ->with('projects', $projects);
 	}
 
 
