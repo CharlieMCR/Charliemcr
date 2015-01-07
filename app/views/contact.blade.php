@@ -2,8 +2,8 @@
 @section('title', 'Contact')
 
 @section('content')
-<div class="col s4 contact group">
-	<div class="group inner">
+<div class="col s4 contact-form group">
+	<div class="group inner row">
 		
 		<h2>Contact</h2>
 

@@ -43,14 +43,14 @@ class ProjectController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($name)
+	public function show($id)
 	{
 		// get the nerd
-        $projects = Project::find($name);
+        $project = Project::where('name', $id)->first();
 
         // show the view and pass the nerd to it
         return View::make('projects.show')
-            ->with('projects', $projects);
+            ->with('project', $project);
 	}
 
 

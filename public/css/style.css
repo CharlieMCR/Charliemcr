@@ -144,24 +144,36 @@ body {
   .wrapper {
     width: 1000px; } }
 
+.row {
+  display: flex;
+  flex-flow: row wrap; }
+  .row > h2 {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 10px 20px;
+    margin: 10px auto;
+    margin: 0.5em auto;
+    flex: 1 100%; }
+  .row p {
+    padding: 1em;
+    line-height: 1.25em; }
+  .row .project-img {
+    text-align: center; }
+
 .project-row {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between; }
   .project-row > h2 {
-    border-bottom: 1px solid #d8d8d8;
-    padding: 10px 20px;
-    margin: 10px auto;
     flex: 1 100%; }
   .project-row p {
-    flex-grow: 2;
-    margin: 1em auto;
-    padding: 1em;
-    line-height: 1.25em; }
+    flex-grow: 2; }
   .project-row .project-img {
     flex-grow: 1;
-    flex-shrink: 1;
+    flex-shrink: 1; }
+  .project-row .project-link {
+    order: 2;
+    flex: 1 100%;
     text-align: center; }
   @media all and (min-width: 1024px) {
     .project-row p, .project-row .project-img {
@@ -179,6 +191,13 @@ body {
     .project-row:nth-child(2n+2) .project-img {
       order: 2;
       text-align: right; } }
+
+.project-item {
+  order: 1;
+  flex: 1 100%; }
+  @media screen and (min-width: 1024px) {
+    .project-item {
+      flex: 1 50%; } }
 
 /*education table*/
 .education {
@@ -221,20 +240,21 @@ body {
 
 .one {
   text-align: center;
-  color: #383838; }
-  .one h1, .one h2, .one p {
+  color: #383838;
+  padding: 30px; }
+  .one h1, .one h2, .one h3, .one p {
     padding: 0 10px;
     margin: 0 auto 20px; }
-  .one h1 {
+  .one h2 {
     font-size: 1.5em;
     padding-top: 0.1em; }
-  .one h2 {
+  .one h3 {
     font-size: 1.25em; }
   @media screen and (min-width: 768px) {
-    .one h1, .one h2, .one p {
+    .one h1, .one h2, .one h3, .one p {
       padding: 0 30px;
       margin: 0 auto 30px; }
-    .one h1 {
+    .one h2 {
       font-size: 3em;
       padding-top: 1em; } }
 
@@ -243,7 +263,8 @@ body {
   .project a {
     position: relative;
     display: inline-block;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0.25em; }
     .project a img {
       width: 100%; }
     .project a p {
@@ -259,7 +280,7 @@ body {
       color: #ccc;
       opacity: 0;
       transition: 1s;
-      padding: 5%; }
+      padding: 6%; }
       .project a p:before {
         pointer-events: none;
         position: absolute;
@@ -286,34 +307,35 @@ body {
     .project a:hover p {
       opacity: 1; }
 
-.contact {
+.contact-form {
   text-align: center; }
-  .contact form {
-    margin: 1em auto; }
-    .contact form label {
+  .contact-form form {
+    margin: 1em auto;
+    width: 90%; }
+    .contact-form form label {
       display: block; }
-    .contact form input {
-      width: 90%;
+    .contact-form form input {
+      width: 100%;
       height: 2em;
       margin: 0.5em auto 2em;
       border: 1px solid #ccc; }
-      .contact form input[type=submit] {
+      .contact-form form input[type=submit] {
         background-color: #ccc;
         border: none;
         height: 2em;
         margin: 2em auto 0;
         font-size: 1.2em; }
-        .contact form input[type=submit]:hover {
+        .contact-form form input[type=submit]:hover {
           background: #555;
           color: #ccc; }
-      .contact form input:hover, .contact form input:focus {
+      .contact-form form input:hover, .contact-form form input:focus {
         background: #efefef; }
-    .contact form textarea {
-      width: 90%;
+    .contact-form form textarea {
+      width: 100%;
       height: 7em;
       margin-top: 0.5em;
       border: 1px solid #ccc; }
-      .contact form textarea:hover, .contact form textarea:focus {
+      .contact-form form textarea:hover, .contact-form form textarea:focus {
         background: #efefef; }
 
 .hide {

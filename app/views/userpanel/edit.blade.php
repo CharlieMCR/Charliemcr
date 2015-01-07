@@ -19,8 +19,13 @@
         {{ Form::textarea('description', Input::old('description'), array('class' => 'form-control')) }}
     </div>
 
+    <div class="form-group">
+        {{ Form::label('url', 'URL') }}
+        {{ Form::text('url', Input::old('url'), array('class' => 'form-control')) }}
+    </div>
+
     <div>
-        Existing file name: {{ $project->url }}
+        Existing file name: {{ $project->img }}
     </div>
     <div class="form-group">
         {{ Form::label('removeImage', 'Delete existing image') }}

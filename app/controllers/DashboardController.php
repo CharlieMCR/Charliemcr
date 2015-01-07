@@ -59,13 +59,14 @@ class DashboardController extends \BaseController {
 		        $imagePath = public_path().'/img/projects/';
 		        Input::file('file')->move($imagePath, $imageName);
 		        $project->img 	= $imageName;
-            	$project->url 	= $imagePath . $imageName;
+            	
             } else {
             	$project->img	= '';
-            	$project->url	= '';
+            	// $project->url	= '';
             }            
             $project->name       	= Input::get('name');
             $project->description   = Input::get('description');
+            $project->url 			= Input::get('url');
             $project->save();            
 
             // redirect
@@ -145,11 +146,12 @@ class DashboardController extends \BaseController {
 		        $imagePath = public_path().'/img/projects/';
 		        Input::file('file')->move($imagePath, $imageName);
 		        $project->img 	= $imageName;
-            	$project->url 	= $imagePath . $imageName;
+            	
             } 
                       
             $project->name       	= Input::get('name');
             $project->description   = Input::get('description');
+            $project->url 			= Input::get('url');
             $project->save(); 
 
             // redirect

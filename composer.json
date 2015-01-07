@@ -7,7 +7,10 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"zizaco/confide": "~4.0@dev",
-		"fzaninotto/faker": "1.5.*@dev"
+		"fzaninotto/faker": "1.5.*@dev",
+		"kriswallsmith/assetic"   : "1.2.*@dev",
+		"toopay/assetic-minifier" : "dev-master",
+		"jasonlewis/resource-watcher" : "dev-master"
 	},
 	"autoload": {
 		"classmap": [

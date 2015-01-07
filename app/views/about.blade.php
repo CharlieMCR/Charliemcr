@@ -4,7 +4,7 @@
 @section('content')
 	<div class="wrapper group">
 			<div class="col s3 group">
-				<div class="group inner">
+				<div class="group inner row">
 					<h2>Charlie Mcr</h2>
 					<p>Hello, I am a Web Developer in Manchester. I am constantly developing my skill set, looking to learn new frameworks, improving workflows and design patterns.</p>
 
@@ -12,7 +12,7 @@
 				</div>
 			</div>
 			<div class="col s1 group">
-				<div class="group inner">
+				<div class="group inner row">
 					<h2>Skills</h2>
 					<ul>
 				        <li>HTML5</li>
@@ -25,7 +25,7 @@
 			    </div>
 			</div>
 			<div class="col s2 group">
-				<div class="group inner">
+				<div class="group inner row">
 					<h2>Workflow</h2>
 					<ul>
 				        <li>Text Editor - Sublime Text</li>

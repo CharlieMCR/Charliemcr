@@ -13,7 +13,9 @@
 
 Route::get('/', function()
 {
-	return View::make('front');
+	$projects = Project::all();
+	
+	return View::make('front')->with('projects', $projects);
 });
 
 Route::get('/about', function()
