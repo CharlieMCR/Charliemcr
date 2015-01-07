@@ -5,7 +5,7 @@
 <h2 class="title">Skills</h2>
 <div class="group">
 <div class="box col skill s4">
-<div class="inner">
+<div class="inner row skill-row">
     <p>All of the skills I am able to work with. Lorem ipsum dolor sit.</p>
     <ul>
         <li>HTML5</li>

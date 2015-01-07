@@ -30,6 +30,9 @@
         padding: 1em;
         line-height: 1.25em;
     }
+    span {
+        margin: 1em auto;
+    }
     .project-img {
         text-align: center;
     }
@@ -87,55 +90,19 @@
         flex: 1 50%;
     }
 }
-// .row {
-//     width: flex-grid(10);
-// }
 
-// .col {
-//     width: flex-grid(10);
-//     float: left; 
-//     margin: 30px auto;
-// }
-
-// .col.s1 {
-//     width: flex-grid(10);
-//     float: left; 
-//     margin: 30px auto;
-//     @media screen and (min-width: 480px) {
-//         width: flex-grid(5);
-//         }
-//     @media screen and (min-width: 768px) {
-//         width: flex-grid(2.5);
-//         }
-// }
-
-// .col.s2 {
-//     width: flex-grid(10);
-//     float: left; 
-//     margin: 30px auto;
-//     @media screen and (min-width: 480px) {
-//         width: flex-grid(5);
-//         }
-//     @media screen and (min-width: 768px) {
-//         width: flex-grid(5);
-//         }
-// }
-
-// .col.s3 {
-//     width: flex-grid(10);
-//     float: left; 
-//     margin: 30px auto;
-//     @media screen and (min-width: 768px) {
-//         width: flex-grid(7.5);
-//         }
-// }
-
-// .col.s4 {
-//     width: flex-grid(10);
-//     float: left; 
-//     margin: 30px auto;
-// }
-
-// .inner {
-//     margin: 0 1em;
-// }
+.skill-row {
+    p:nth-child(1) {
+        flex: 1 100%;
+        @media screen and (min-width: 768px) {
+            flex: 2 0;
+        }
+    }
+    ul {
+        flex: 1 100%;
+        padding: 0 1em;
+        @media screen and (min-width: 768px) {
+            flex: 1 0;
+        }
+    }
+}

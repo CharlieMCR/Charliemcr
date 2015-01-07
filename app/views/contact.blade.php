@@ -8,7 +8,7 @@
 		<h2>Contact</h2>
 
 		@if (Session::has('success'))
-			{{ Session::get('success')}}
+			<span>{{ Session::get('success')}}</span>
 		@endif
 
 		{{ Form::open(array('action' => 'ContactController@index'))}}

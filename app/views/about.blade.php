@@ -12,7 +12,7 @@
 				</div>
 			</div>
 			<div class="col s1 group">
-				<div class="group inner row">
+				<div class="group inner row skill-row">
 					<h2>Skills</h2>
 					<ul>
 				        <li>HTML5</li>
@@ -25,7 +25,7 @@
 			    </div>
 			</div>
 			<div class="col s2 group">
-				<div class="group inner row">
+				<div class="group inner row skill-row">
 					<h2>Workflow</h2>
 					<ul>
 				        <li>Text Editor - Sublime Text</li>

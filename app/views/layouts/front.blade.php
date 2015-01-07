@@ -23,7 +23,7 @@
     <![endif]-->
  
     <!-- Favicons-->
-    <link rel="shortcut icon" href="{{ asset ('img/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset ('/favicon.ico') }}">
  
 </head>
 
