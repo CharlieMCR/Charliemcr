@@ -1,15 +1,17 @@
 @extends('layouts.dashboard')
 @section('title', '')
 @section('content')
-
-<h1>Showing {{ $project->name }}</h1>
-
-    <div class="jumbotron text-center">
-        <h2>{{ $project->name }}</h2>
-        <p>
-            <strong>Description:</strong> {{ $project->description }}<br>
-            <strong>Image Location:</strong> {{ $project->img }}<br>
-            <strong>Url:</strong> {{ $project->url }}
-        </p>
-    </div>
+    <div class="row">
+		<h2 class="">{{ $project->name }}</h2>
+		
+		<div class="project-img">
+		@if ($project->img == true)
+			<img src="/img/projects/{{ $project->img }}" alt="{{ $project->name }}">
+		@endif
+		</div>
+		{{ HTML::link('//' . $project->url, $project->url)}}
+		<p>{{ $project->description }}</p>
+		{{ HTML::link('//' . $project->github, $project->github)}}
+		<p>Rating: {{ $project->rating }}</p>
+	</div>
 @stop

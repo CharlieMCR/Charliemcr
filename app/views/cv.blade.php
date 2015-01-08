@@ -2,7 +2,7 @@
 @section('title', 'CV')
 
 @section('content')
-<h2 class="title">Skills</h2>
+<h2 class="title open"><img src="/img/chevron2.png"> Skills</h2>
 <div class="group">
 <div class="box col skill s4">
 <div class="inner row skill-row">
@@ -25,7 +25,7 @@
 </div>
 </div>
 </div>
-<h2 class="title">Education</h2>
+<h2 class="title"><img src="/img/chevron2.png"> Education</h2>
 <div class="group">
 <div class="col s4">
     <div class="inner education">
@@ -85,7 +85,7 @@
     </div>
 </div>
 </div>
-<h2 class="title">Employment</h2>
+<h2 class="title"><img src="/img/chevron2.png"> Employment</h2>
 <div class="group">
 <div class="col s4">
 <div class="inner employment">

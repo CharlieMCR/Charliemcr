@@ -24,9 +24,9 @@ class ContactController extends \BaseController {
 		$data = Input::all();
 
 		$rules = array(
-			'name' => 'required',
+			'name' => 'required|aplha_dash',
 			'email' => 'required|email',
-			'message' => 'required|min:5',
+			'message' => 'required|min:1|alpha_dash',
 			'address' => 'max:0'
 		);
 

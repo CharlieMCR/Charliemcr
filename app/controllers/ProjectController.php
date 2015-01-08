@@ -9,8 +9,8 @@ class ProjectController extends \BaseController {
 	 */
 	public function index()
 	{
-		$projects = Project::all();
-
+		$projects = Project::orderBy('rating', 'DESC')->get();
+		
 		return View::make('projects.index')->with('projects', $projects);
 	}
 

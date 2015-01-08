@@ -158,8 +158,12 @@ body {
     line-height: 1.25em; }
   .row span {
     margin: 1em auto; }
+  .row a {
+    text-align: center;
+    flex: 1 100%; }
   .row .project-img {
-    text-align: center; }
+    text-align: center;
+    flex: 1 100%; }
 
 .project-row {
   display: flex;
@@ -213,7 +217,38 @@ body {
     .skill-row ul {
       flex: 1 0; } }
 
+/* dashboard */
+.dashboard .row img {
+  flex: 1 100%; }
+.dashboard .row p {
+  flex: 1 100%; }
+.dashboard table {
+  padding: 1em;
+  width: 100%; }
+.dashboard td {
+  margin: 0 auto;
+  padding: 0.15em 2em; }
+  .dashboard td.grade {
+    text-align: center; }
+.dashboard thead {
+  border-bottom: 1px solid #ccc;
+  padding: 0.25em 2em; }
+.dashboard tr:nth-child(2n+2) {
+  background-color: #efefef; }
+
 /*education table*/
+.open img {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: 1s; }
+
+.closed img {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 1s; }
+
 .education {
   width: 95.9633%;
   margin: auto;
@@ -325,7 +360,7 @@ body {
   text-align: center; }
   .contact-form form {
     margin: 1em auto;
-    width: 90%; }
+    width: 100%; }
     .contact-form form label {
       display: block; }
     .contact-form form input {

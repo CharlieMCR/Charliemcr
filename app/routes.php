@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	$projects = Project::all();
+	$projects = Project::orderBy('rating', 'DESC')->get();
 	
 	return View::make('front')->with('projects', $projects);
 });

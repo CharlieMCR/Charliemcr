@@ -43,7 +43,7 @@ class DashboardController extends \BaseController {
 		// validate
         $rules = array(
             'name'       	=> 'required|unique:projects|alpha_dash',
-            'description'   => 'required|alpha_dash',
+            'description'   => 'required',
             'file'			=> 'image'
         );
         $validator = Validator::make($data, $rules);
@@ -67,6 +67,8 @@ class DashboardController extends \BaseController {
             $project->name       	= Input::get('name');
             $project->description   = Input::get('description');
             $project->url 			= Input::get('url');
+            $project->github 		= Input::get('github');
+            $project->rating 		= Input::get('rating');
             $project->save();            
 
             // redirect
@@ -152,6 +154,8 @@ class DashboardController extends \BaseController {
             $project->name       	= Input::get('name');
             $project->description   = Input::get('description');
             $project->url 			= Input::get('url');
+            $project->github 		= Input::get('github');
+            $project->rating 		= Input::get('rating');
             $project->save(); 
 
             // redirect

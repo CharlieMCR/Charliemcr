@@ -2,12 +2,14 @@
 @section('content')
 <div class="row">
 	<h2 class="">{{ $project->name }}</h2>
-	{{ HTML::link('//' . $project->url, $project->url)}}
+	
 	<div class="project-img">
 	@if ($project->img == true)
-		<img src="/img/projects/{{ $project->img }}" alt="">
+		<img src="/img/projects/{{ $project->img }}" alt="{{ $project->name }}">
 	@endif
 	</div>
+	{{ HTML::link('//' . $project->url, $project->url)}}
 	<p>{{ $project->description }}</p>
+	{{ HTML::link('//' . $project->github, $project->github)}}
 </div>
 @stop

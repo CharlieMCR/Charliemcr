@@ -80,7 +80,22 @@ body {
 @import "_layout.scss";
 
 /*education table*/
-
+.open {
+    img {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        transition: 1s;
+    }
+}
+.closed {
+    img {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        transition: 1s;
+    }
+}
 .education {
     width: flex-grid(9.6);
     margin: auto;
@@ -236,7 +251,7 @@ body {
     text-align: center;
     form {
         margin: 1em auto;
-        width: 90%;
+        width: 100%;
         label {
             display: block;
         }
