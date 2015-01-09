@@ -31,19 +31,18 @@
 
             <!-- we will also add show, edit, and delete buttons -->
             <td>
+                <!-- show the project (uses the show method found at GET /projects/{id} -->
+                <a href="{{ URL::to('userpanel/dashboard/' . $value->id) }}">{{ Form::button('Show') }}</a>
+
+                <!-- edit this project (uses the edit method found at GET /projects/{id}/edit -->
+                <a href="{{ URL::to('userpanel/dashboard/' . $value->id . '/edit') }}">{{ Form::button('Edit') }}</a>
 
                 <!-- delete the project (uses the destroy method DESTROY /projects/{id} -->
                 <!-- we will add this later since its a little more complicated than the other two buttons -->
                 {{ Form::open(array('url' => 'userpanel/dashboard/' . $value->id, 'class' => 'pull-right')) }}
                     {{ Form::hidden('_method', 'DELETE') }}
-                    {{ Form::submit('Delete', array('class' => 'btn btn-warning')) }}
+                    {{ Form::submit('Delete', array('class' => 'btn delete')) }}
                 {{ Form::close() }}
-
-                <!-- show the project (uses the show method found at GET /projects/{id} -->
-                <a class="btn" href="{{ URL::to('userpanel/dashboard/' . $value->id) }}">Show</a>
-
-                <!-- edit this project (uses the edit method found at GET /projects/{id}/edit -->
-                <a class="btn" href="{{ URL::to('userpanel/dashboard/' . $value->id . '/edit') }}">Edit</a>
 
             </td>
         </tr>

@@ -14,9 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  
     <!--css-->
-    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+    {{ HTML::style('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic')}}
+    {{ HTML::style('css/style.min.css')}}
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

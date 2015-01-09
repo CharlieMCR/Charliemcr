@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 @section('title', '')
 @section('content')
-    <div class="row">
+    <div class="row flex">
 		<h2 class="">{{ $project->name }}</h2>
 		
 		<div class="project-img">

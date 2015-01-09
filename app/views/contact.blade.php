@@ -2,8 +2,7 @@
 @section('title', 'Contact')
 
 @section('content')
-<div class="col s4 contact-form group">
-	<div class="group inner row">
+	<div class="contact-form row flex">
 		
 		<h2>Contact</h2>
 
@@ -38,5 +37,4 @@
 		{{ Form::close() }}
 
 	</div>
-</div>
 @stop

@@ -14,10 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  
     <!--css-->
-    <link rel="stylesheet" href="//xnetdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+    {{ HTML::style('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic')}}
+    {{ HTML::style('css/style.min.css')}}
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,6 +67,14 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
     
     {{ HTML::script('js/app.js') }}
+    <script type="text/javascript">
+        $('.delete').on('click', function(){
+            if (confirm('Are you sure you want to delete this?')) {
+                return true;
+            }
+            return false;
+        });
+    </script>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

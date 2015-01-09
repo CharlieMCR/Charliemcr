@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div class="row flex">
+<div class="row flex project">
 	<h2 class="">{{ $project->name }}</h2>
 	
 	<div class="project-img">

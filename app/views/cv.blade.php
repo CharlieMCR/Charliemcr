@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('title', 'CV')
+@section('view', $viewName)
 
 @section('content')
 <div class="flex row">

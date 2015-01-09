@@ -20,11 +20,18 @@ Route::get('/', function()
 
 Route::get('/about', function()
 {
-	return View::make('about');
+	View::composer('*', function($view){
+		$view->with('viewName', $view->getName());
+	});
+	// $title = '';
+	return View::make('about');//->with('about', $title);
 });
 
 Route::get('/cv', function()
 {
+	View::composer('*', function($view){
+		$view->with('viewName', $view->getName());
+	});
 	return View::make('cv');
 });
 
