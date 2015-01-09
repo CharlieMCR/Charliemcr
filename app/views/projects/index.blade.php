@@ -3,7 +3,7 @@
 
 @section('content')
 	@foreach($projects as $key => $value)
-            <div class="row project-row">
+            <div class="row project-row flex">
 	            <h2 class="">{{link_to_route('projects.show', $value->name, $value->name)}}</h2>
 				<div class="project-img">
 					@if ($value->img == true)

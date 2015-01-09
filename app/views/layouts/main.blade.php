@@ -38,9 +38,8 @@
     <a class="to_nav" href="#primary_nav">&#x2261;</a>
 
 </header>
-<div class="wrapper group">
+<div class="wrapper">
     @yield('content')
-</div>
 <footer>
          
     <p>Copyright &copy;<?php echo date('Y'); ?> <a href="http://www.charlimcr.com">Charlie Mcr</a></p>
@@ -52,7 +51,7 @@
 </footer>
 </div><!--end wrapper-->
 
-<nav class="group nav" id="primary_nav">
+<nav class="nav" id="primary_nav">
  
     <ul class="">
         <li class="about"><a href="/about/">About</a></li>

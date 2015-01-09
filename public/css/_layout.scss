@@ -2,7 +2,7 @@
 
 .wrapper {
      & > h2 {
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid $border;
         padding: 10px 20px;
         margin: 10px auto;
         }
@@ -15,101 +15,337 @@
         width: 1000px;
     }
 }
+
+.flex {
+    display: -webkit-flex;
+    @include prefixer(display, flex, moz ms spec);
+    @include prefixer(flex-flow, row wrap, webkit moz ms spec);
+}
+
+.flex-item {
+    @include prefixer(flex, 1 100%, webkit moz ms spec);
+}
+
 .row {
-    display: flex;
-    flex-flow: row wrap;
     & > h2 {
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid $border;
         padding: 10px 20px;
         margin: 10px auto;
         margin: 0.5em auto;
-        flex: 1 100%;
+        // @include prefixer(flex, 1 100%, webkit moz ms spec);
+        @extend .flex-item;
+        text-align: left;
     }
     p {
-        // margin: 1em auto;
         padding: 1em;
+        padding: 1em 1em 0;
         line-height: 1.25em;
     }
     span {
         margin: 1em auto;
     }
     a {
-        text-align: center;
-        flex: 1 100%;
+        // text-align: center;
+        // @include prefixer(flex, 1 100%, webkit moz ms spec);
     }
-    .project-img {
+    .project-img, a {
         text-align: center;
-        flex: 1 100%;
+        // @include prefixer(flex, 1 100%, webkit moz ms spec);
+        @extend .flex-item;
     }
 }
 
-.project-row {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    & > h2 {
-        flex: 1 100%;
+/* Front Page */
+
+.front {
+    background: linear-gradient(rgba(204,204,204,0.7), 
+                rgba(255,255,255,0) 75%), 
+                url('../img/bg640a.jpg') 
+                no-repeat center center fixed;
+    @media screen and (min-width: 400px) {
+        background: linear-gradient(rgba(204,204,204,0.7), 
+                    rgba(255,255,255,0) 75%), 
+                    url('../img/bg2560a.jpg') 
+                    no-repeat center center fixed;
+        background-size: cover;
         }
-    p {
-        flex-grow: 2;
+    
+    background-size: cover;
+    max-width: 100%;
+    padding: 0 10%;
+    @include setHeight;
+}
+
+.front-inner {
+    text-align: center;
+    color: $dark;
+    padding: 30px;
+    // @include prefixer(flex, 1 100%, webkit moz ms spec);
+    @extend .flex-item;
+    h2 {
+        font-size: 1.5em;
     }
-    .project-img {
-        flex-grow: 1;
-        flex-shrink: 1;
+    h3 {
+        font-size: 1.25em;
     }
-    .project-link {
-        order: 2;
-        flex: 1 100%;
-        text-align: center;
+    @media screen and (min-width: 768px) {
+        h1, h2, h3, p {
+            margin: 0 auto 30px;
+        }
+        h2 {
+            font-size: 3em;
+            padding-top: 1em;
+        }
+    }
+    & + .down {
+        @include prefixer(display, flex, webkit moz ms spec);
+        display: -webkit-flex;
+        @include prefixer(align-self, flex-end, webkit moz ms spec);
+        margin: 0 auto;
+        padding: 0 5em 3em;
+        .chevron {
+            border: 1em solid rgba(204,204,204,0.9);
+            border-width: 1em 1em 0 0;
+            height: 5em;
+            width: 5em;
+            @include prefixer(transform, rotate(135deg), webkit ms spec);
+            box-shadow: 1em -1em 1em 0em rgba(0, 0, 0, 0.3);
+        }
+        @include animation(bounce 2s infinite);
+    }
+}
+
+.project-item {
+    @include prefixer(order, 1, webkit moz ms spec);
+    // @include prefixer(flex, 1 100%, webkit moz ms spec);
+    @extend .flex-item;
+    @media screen and (min-width: 1024px) {
+        @include prefixer(flex, 1 50%, webkit moz ms spec);
+    }
+    text-align: center;
+    a { 
+        position: relative; 
+        display: inline-block;
+        overflow: hidden;
+        padding: 0.25em;
+        img {
+            width: 100%;
+            }
+        p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            // @include prefixer (
+            //     background linear-gradient, 
+            //                 ($dark, $grey), 
+            //                 webkit moz);
+                background: linear-gradient($dark, $grey);
+                color: $light;
+                opacity:0;
+                transition:1s;
+                padding: 6%;
+            &:before {
+                pointer-events: none;
+                position: absolute;
+                content: '';
+                height: 0;
+                width: 0;
+                bottom: 0;
+                right: 0;
+                background: white;
+                /* IE9 */
+                // @include prefixer (
+                //     background linear-gradient, 
+                //     (315deg, white 45%, #aaaaaa 50%, #cccccc 20%, white 80%), 
+                //     webkit moz);
+                background: linear-gradient(315deg, white 45%, #aaaaaa 50%, #cccccc 20%, white 80%);
+                box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+                @include prefixer (transition-duration, 0.3s, webkit moz);
+                transition-duration: 0.3s;
+                @include prefixer (transition-property, (width, height), webkit moz);
+                transition-property: width, height;
+            }
+            &:hover:before, &:focus:before, &:active:before {
+                width: 25px;
+                height: 25px;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* CV */
+
+.open, .closed {
+     > .chevron {
+        padding-right: 0.5em;
+    }
+}
+
+.open .chevron {
+    &::before {
+        @include chevronAccord;
+        @include prefixer(transform, rotate(135deg), webkit ms spec);
+    }
+}
+.closed .chevron {
+    &::before {
+        @include chevronAccord;
+        @include prefixer(transform, rotate(45deg), webkit ms spec);
+    }
+}
+
+.education {
+    table {
+        padding: 1em;
+        width: 100%;
+    }
+    td {
+        margin: 0 auto;
+        padding: 0.15em 2em;
+        &.grade {
+            text-align: center;
+        }
+    }
+    th {
+        letter-spacing: 0.1em;
+        border-bottom: 1px solid $border;
+        padding: 0.25em 2em;
+        font-weight: bold;
+    }
+    tbody tr:nth-child(2n+1) {
+        background-color: $white;
+    }
+}
+
+.employment {
+    .job{
+        padding: 0 1em;
+        .description ul {
+            list-style: disc inside none;
+            padding: 0.5em 0 0;
+        }
+    }
+    .title > h3 {
+        border-bottom: 1px solid $light;
+        margin: 1em 0 0.75em;
+    }
+}
+
+/* Projects Page */
+
+.project-row {
+    @include prefixer(align-items, center, webkit moz ms spec);
+    @include prefixer(justify-content, space-between, webkit moz ms spec);
+    > a {
+        margin-top: 1em;
     }
     @media all and (min-width: 1024px) {
-        p, .project-img { flex: 1 auto; }
         p { 
-            order: 2;
-            flex-grow: 2;
-            flex-basis: 0;
+            @include prefixer(order, 2, webkit moz ms spec);
+            @include prefixer(flex, 2 0, webkit moz ms spec);
         }
         .project-img {
-            order: 1;
-            flex-grow: 1;
-            flex-basis: 0;
+            @include prefixer(order, 1, webkit moz ms spec);
+            @include prefixer(flex, 1 0, webkit moz ms spec);
+        }
+        > a {
+            @include prefixer(order, 2, webkit moz ms spec);
         }
         &:nth-child(2n+2) {
-            p { order: 1; }
+            p { 
+                @include prefixer(order, 1, webkit moz ms spec);
+            }
             .project-img {
-                order: 2;
+                @include prefixer(order, 2, webkit moz ms spec);
                 text-align: right;
             }
         }
     }
 }
 
-.front .col {
-}
 
-.project-item {
-    order: 1;
-    flex: 1 100%;
-    @media screen and (min-width: 1024px) {
-        flex: 1 50%;
-    }
-}
+
+
+
+
+
+
+
+
 
 .skill-row {
     p:nth-child(1) {
-        flex: 1 100%;
+        // @include prefixer(flex, 1 100%, webkit moz ms spec);
+        @extend .flex-item;
         @media screen and (min-width: 768px) {
-            flex: 2 0;
+            @include prefixer(flex, 2 0, webkit moz ms spec);
+            // flex: 2 0;
         }
     }
     ul {
-        flex: 1 100%;
+        // @include prefixer(flex, 1 100%, webkit moz ms spec);
+        @extend .flex-item;
         padding: 0 1em;
         @media screen and (min-width: 768px) {
-            flex: 1 0;
+            @include prefixer(flex, 1 0, webkit moz ms spec);
+            // flex: 1 0;
         }
     }
+}
+
+/* Contact Page */
+
+.contact-form {
+    h2 {
+        text-align: center;
+    }
+    form {
+        text-align: center;
+        margin: 1em auto 3em;
+        width: 95%;
+        label {
+            display: block;
+        }
+        input {
+            width: 100%;
+            height: 2em;
+            margin: 0.5em auto 2em;
+            border: 1px solid $light;
+            &[type=submit] {
+                background-color: $light;
+                border: none;
+                height: 2em;
+                margin: 2em auto 0;
+                font-size: 1.2em;
+                &:hover {
+                    background: $grey;
+                    color: $light;
+                }
+            }
+            &:hover, 
+            &:focus {
+                background: $white;
+            }
+        }
+        textarea {
+            width: 100%;
+            height: 7em;
+            margin-top: 0.5em;
+            border: 1px solid $light;
+            &:hover, 
+            &:focus {
+                background: $white;
+            }
+        }
+
+    }
+    
 }
 
 /* dashboard */
@@ -117,10 +353,12 @@
 .dashboard {
     .row {
         img {
-            flex: 1 100%;
+            // @include prefixer(flex, 1 100%, webkit moz ms spec);
+            @extend .flex-item;
         }
         p {
-            flex: 1 100%;
+            // @include prefixer(flex, 1 100%, webkit moz ms spec);
+            @extend .flex-item;
         }
     }
     table {

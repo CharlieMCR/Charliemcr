@@ -1,0 +1,87 @@
+@mixin chevronAccord {
+    border: solid $black;
+    border-width: 0.1em 0.1em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    position: relative;
+    top: 0.15em;
+    vertical-align: top;
+    width: 0.45em;
+    transition: 1s;
+}
+
+@mixin setHeight {
+	@media screen and (min-height: 320px) {
+            min-height: 270px;
+        }
+    @media screen and (min-height: 375px) {
+            min-height: 325px;
+        }
+    @media screen and (min-height: 414px) {
+        min-height: 364px;
+    }
+    @media screen and (min-height: 480px) {
+            min-height: 430px;
+        }
+    @media screen and (min-height: 533px) {
+        min-height: 483px;
+    }
+    @media screen and (min-height: 568px) {
+        min-height: 518px;
+    }
+    @media screen and (min-height: 600px) {
+        min-height: 550px;
+    }
+    @media screen and (min-height: 604px) {
+        min-height: 554px;
+    }
+    @media screen and (min-height: 640px) {
+        min-height: 590px;
+    }
+    @media screen and (min-height: 667px) {
+        min-height: 617px;
+    }
+    @media screen and (min-height: 736px) {
+        min-height: 686px;
+    }
+    @media screen and (min-height: 768px) {
+        min-height: 718px;
+    }
+    @media screen and (min-height: 800px) {
+        min-height: 750px;
+    }
+    @media screen and (min-height: 854px) {
+        min-height: 804px;
+    }
+    @media screen and (min-height: 950px) {
+        min-height: 900px;
+    }
+    @media screen and (min-height: 960px) {
+        min-height: 910px;
+    }
+    @media screen and (min-height: 1024px) {
+        min-height: 974px;
+    }
+    @media screen and (min-height: 1100px) {
+        min-height: 1050px;
+    }
+    @media screen and (min-height: 1150px) {
+        min-height: 1100px;
+    }
+    @media screen and (min-height: 1200px) {
+        min-height: 1150px;
+    }
+    @media screen and (min-height: 1280px) {
+        min-height: 1230px;
+    }
+    @media screen and (min-height: 1440px) {
+        min-height: 1390px;
+    }
+    @media screen and (min-height: 1600px) {
+        min-height: 1550px;
+    }
+    @media screen and (min-height: 1920px) {
+        min-height: 1870px;
+    }
+}

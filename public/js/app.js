@@ -19,16 +19,19 @@
 
 		$('#main-content').css('minHeight', windowHeight);
 	}
+	// console.log($('.front').height());
 
-	setFrontHeight();
-	var win = $(window).width();
-    $(window).resize(function(e) {
-        if ($(this).height() <= win-50 || $(this).height() >= win+50) {
-            setFrontHeight();
-        };
-        
+	// setFrontHeight();
+ //    $(window).on('orientationchange', function(e){
+ //    	setFrontHeight();
+ //    });
+
+    $('.down').on('click', function(){
+    	$(this).fadeOut();
+    	$('html, body').animate({
+    		scrollTop: $('.wrapper').offset().top
+    	}, 2000);
     });
-
         
     }); // end ready
 
