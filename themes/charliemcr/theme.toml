@@ -7,7 +7,7 @@ licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
 description = ""
 homepage = "http://example.com/"
 tags = []
-features = []
+features = ["posts", "shortcodes"]
 min_version = "0.29"
 
 [author]
