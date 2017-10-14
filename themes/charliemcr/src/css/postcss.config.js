@@ -1,9 +1,10 @@
 module.exports = {
-  plugins: {
-   'postcss-import': {},
-   'postcss-cssnext': {
-	   browsers: ['last 2 versions', '> 5%'],
-       warnForDuplicates: true
-	  }
-	}  
+    plugins: {
+        'postcss-import': {},
+        'postcss-cssnext': {
+            browsers: ['last 2 versions', '> 5%'],
+            warnForDuplicates: true,
+            nesting: true
+        }
+    }
 };

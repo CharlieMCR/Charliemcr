@@ -24,7 +24,8 @@ module.exports = {
 					fallback: "style-loader",
 					use: 'css-loader?importLoaders=1!postcss-loader'
 				})
-			}
+			},
+            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
 		]
 	},
 

@@ -28,5 +28,9 @@
     "tachyons": "^4.7.0",
     "webpack": "^2.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lato-font": "^3.0.0",
+    "notosans-fontface": "^1.0.1",
+    "url-loader": "^0.6.2"
+  }
 }

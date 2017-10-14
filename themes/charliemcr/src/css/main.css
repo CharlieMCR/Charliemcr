@@ -2,4 +2,6 @@
 @import '_code';
 @import '_hugo-internal-templates';
 @import '_social-icons';
+@import '_lato';
+@import '_noto';
 @import '_styles';
