@@ -5,10 +5,10 @@
     </a>
     <div class="flex-l items-center">
       {{ if .Site.Menus.main }}
-        <ul class="pl0 ma0 ml0 mt0-l mt3 mr3">
+        <ul class="pl0 ma0 ml0 mt0-l mt3">
           {{ range .Site.Menus.main }}
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="{{ .URL }}" title="{{ .Name }} page">
+          <li class="list f5 fw4 dib">
+            <a class="hover-white no-underline white-90 pv2 pr3" href="{{ .URL }}" title="{{ .Name }} page">
               {{ .Name }}
             </a>
           </li>
