@@ -3,8 +3,7 @@ module.exports = {
         'postcss-import': {},
         'postcss-cssnext': {
             browsers: ['last 2 versions', '> 5%'],
-            warnForDuplicates: true,
-            nesting: true
+            warnForDuplicates: true
         }
     }
 };

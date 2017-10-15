@@ -1,16 +1,42 @@
 import styles from './../css/main.css';
 
+let form = document.querySelector('form');
 
-// NOTE: TO use Jquery, just call the modules you want
-// var $ = require('jquery/src/core');
-// require('jquery/src/core/init');
-// require('jquery/src/manipulation');
+if (form && form.length) {
 
-// OR, use all of them
-// var $ = require('jquery/src/jquery');
+    form.addEventListener('submit', function (e) {
+        let formData = new FormData(form);
+        let result = {};
+        let xhr = new XMLHttpRequest();
+        let message = document.querySelector('.md p');
 
-// And write your code
-// $('body').append('<p>Jquery is working</p>');
-//
-// You can also "require" any script from its location in the node modules folder. Webpack often knows what to look for, but you can add a script directly like this:
-// var javascriptthingy = require('name/folder/file.js');
+        e.preventDefault();
+
+        if (formData.get('_gotcha') && formData.get('_gotcha').length) {
+            return;
+        }
+        formData.delete('_gotcha');
+        if (formData.get('email')) {
+            formData.append('_replyto', formData.get('email'));
+        }
+        for (let entry of formData.entries())
+        {
+            result[entry[0]] = entry[1];
+        }
+        xhr.open(form.method, form.action, true);
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                console.log(xhr.responseText);
+                form.reset();
+                message.innerText = "Thanks for the message, I'll be in touch soon.";
+                message.classList.add('green');
+            } else {
+                console.log(xhr.responseText);
+                message.innerText = "Something went wrong.";
+                message.classList.add('red');
+            }
+        };
+        xhr.send(JSON.stringify(result));
+    });
+}

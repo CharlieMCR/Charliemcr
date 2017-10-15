@@ -25,6 +25,7 @@ npm-debug.log
 /src/client.config.json
 /styleguide/
 /docs/
+/vendor/
 /themes/charliemcr/src/node_modules/
 /themes/charliemcr/static/dist/
 
