@@ -17,7 +17,7 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     {{ end }}
 
-    <link href='{{ "dist/main.css" | relURL }}?{{ .Now.Unix }}' rel='stylesheet' type="text/css" />
+    <link href='{{ "dist/main.css" | relURL }}?{{ now.Unix }}' rel='stylesheet' type="text/css" />
     {{ block "favicon" . }}
       {{ partial "site-favicon.html" . }}
     {{ end }}
