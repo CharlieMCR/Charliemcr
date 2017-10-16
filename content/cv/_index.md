@@ -3,13 +3,16 @@ title: "CV"
 date: 2017-10-14T11:45:49+01:00
 draft: false
 featured_image: '/images/photo-1505639594395-22cc30113a4e.jpg'
-description: "Lorem ipsum door sit amet."
+description: "Curriculum Vitae – Charlie Heesom"
 ---
 
 ## Experience
 
+### British Cycling
+* Manchester May 2016 – Present PHP Software Developer
+
 ### Webantic Digital Agency 
-* Manchester Jan 2015 – Present Full-Stack Developer
+* Manchester Jan 2015 – May 2016 Full-Stack Developer
     * Core Magento developer across team based and solo projects in line with
 waterfall development, and individual sprints for smaller tasks
     * Responsible for writing efficient and maintainable modules for re-use
