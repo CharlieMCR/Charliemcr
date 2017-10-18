@@ -1,12 +1,14 @@
 {{ $featured_image := .Params.featured_image }}
+{{ $thumbnail := .Params.thumbnail }}
 <article class="bb b--black-10">
   <a class="db pv4 ph3 ph0-l no-underline mid-gray header-primary dim" href="{{ .URL }}">
     <div class="flex flex-column flex-row-ns">
-      {{ if .Params.featured_image }}
-          {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-        {{ $featured_image := (trim $featured_image "/") | absURL }}
+      {{ if .Params.thumbnail }}
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <img src="{{ $featured_image }}" class="db" alt="image from {{ .Title }}">
+          <img src="/images/{{ $thumbnail }}" class="db"
+          srcset="/images/450/{{ $thumbnail }} 450w, /images/768/{{ $thumbnail }} 768w"
+          sizes="(max-width: 800px) 450px, (max-width: 1062px) 768px"
+          alt="image from {{ .Title }}" />
         </div>
       {{ end }}
       <div class="w-100{{ if .Params.featured_image }} w-60-ns pl3-ns{{ end }}">
