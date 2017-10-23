@@ -15,6 +15,7 @@ nbproject/
 .vagrant/
 
 # FE Setup
+.env
 .bin/node_modules/
 /node_modules/
 src/node_modules/
