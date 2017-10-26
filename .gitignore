@@ -1,9 +1,36 @@
-/bootstrap/compiled.php
-/vendor
-composer.phar
-composer.lock
-.env.*.php
-.env.php
+# OS
 .DS_Store
 Thumbs.db
-/public/css/bourbon
+
+# IDEs
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+public/
+nbproject/
+
+# Vagrant
+.vagrant/
+
+# FE Setup
+.env
+.bin/node_modules/
+/node_modules/
+src/node_modules/
+src/npm-debug.log.*
+npm-debug.log
+/npm-debug.log*
+/dist/
+/src/client.config.json
+/styleguide/
+/docs/
+/vendor/
+/themes/charliemcr/src/node_modules/
+/themes/charliemcr/static/dist/
+config.toml
+
+/junit.xml
+partials/structure/stylesheet.html
+/themes/ananke/

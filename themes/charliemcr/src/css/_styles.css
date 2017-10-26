@@ -1,0 +1,101 @@
+/* Put your custom styles here and run `npm start` from the "src" directory on */
+
+:root {
+    --primary-color: #5a57af;
+    --primary-dark: rgba(90, 87, 175, 0.825);
+    --primary-darker-solid: rgb(65, 66, 124);
+    --primary-light: rgba(90, 87, 175, 0.725);
+    --primary-lighter: rgba(90, 87, 175, 0.5);
+    --body-color: #64637d;
+    --body-dark: #3a313c;
+    --body-light: #949699;
+}
+
+.lh-7 {
+    line-height: .7;
+}
+
+.h18 {
+    min-height: 18rem;
+}
+.h18 .h-100 {
+    min-height: inherit;
+}
+
+@media screen and (min-width: 60em) {
+    .h32-l {
+        min-height: 32rem;
+    }
+    .h32-l . h-100 {
+        min-height: inherit;
+    }
+
+}
+
+.align-center {
+    align-items: center;
+}
+
+body {
+    color: var(--body-color);
+}
+
+.mid-gray {
+    color: var(--body-color);
+}
+
+.header-primary h1,
+.header-primary h2 {
+    color: var(--primary-color);
+}
+
+.header-primary a {
+    color: inherit;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-primary-d {
+    background-color: var(--primary-dark);
+}
+.bg-primary-ds {
+    background-color: var(--primary-darker-solid);
+}
+
+.bg-primary-l {
+    background-color: var(--primary-light);
+}
+
+.bg-primary-lr {
+    background-color: var(--primary-lighter);
+}
+
+.primary-c {
+    color: var(--primary-color);
+}
+
+.primary-d {
+    color: var(--primary-dark);
+}
+
+.primary-l {
+    color: var(--primary-light);
+}
+
+.primary-lr {
+    color: var(--primary-lighter);
+}
+
+.lato {
+    font-family: 'lato', sans-serif;
+}
+
+.header-lato h1, .header-lato h2, .header-lato h3 {
+        font-family: 'lato', sans-serif;
+}
+
+.noto {
+    font-family: 'noto', sans-serif;
+}
