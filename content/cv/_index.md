@@ -10,6 +10,8 @@ description: "Curriculum Vitae – Charlie Heesom"
 
 ### British Cycling
 * Manchester May 2016 – Present PHP Software Developer
+    * Part of a team operating SCRUM developing and maintaining a system with over 130,000 active users
+    * Architecting and designing greenfield projects and micro-services
 
 ### Webantic Digital Agency 
 * Manchester Jan 2015 – May 2016 Full-Stack Developer
@@ -39,19 +41,18 @@ for instore and online 3D sweet printing outlet
     * LESS, Sass & CSS3
 * Frameworks
     * Laravel
-    * Magento
-    * Wordpress
-    * jQuery
-    * Bootstrap
-    * Foundation
+    * Zend
+    * Slim
+    * Node JS
 * Tools
-    * Git (Intermediate)
-    * MySQL (Intermediate
-    * Linux (Intermediate)
-    * Gulp (Intermediate)
-    * Vagrant (Intermediate)
-    * Illustrator (Basic)
-    * Photoshop (Basic)
+    * Git & Mercurial
+    * MySQL
+    * Linux
+    * Gulp
+    * Vagrant
+    * Docker
+    * Jenkins
+    * Nginx & Apache
 
 ## Education
 
