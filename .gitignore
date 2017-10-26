@@ -29,6 +29,7 @@ npm-debug.log
 /vendor/
 /themes/charliemcr/src/node_modules/
 /themes/charliemcr/static/dist/
+config.toml
 
 /junit.xml
 partials/structure/stylesheet.html
