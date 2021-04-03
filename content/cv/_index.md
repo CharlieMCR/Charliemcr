@@ -4,6 +4,7 @@ date: 2017-10-14T11:45:49+01:00
 draft: false
 featured_image: '/images/photo-1505639594395-22cc30113a4e.jpg'
 description: "Curriculum Vitae – Charlie Heesom"
+type: page
 menu:
   main: {
     weight: 2
