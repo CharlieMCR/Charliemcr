@@ -4,6 +4,7 @@ slug: "about"
 description: "Hello, I am a Web Developer in Manchester. I am constantly developing my skill set, looking to learn new technologies, improving workflows and design patterns."
 featured_image: '/images/photo-1471877325906-aee7c2240b5f.jpg'
 draft: false
+type: page
 menu:
   main: {
     weight: 1
